@@ -1,0 +1,73 @@
+body {
+	background: lightblue;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	text-align: center;
+}
+
+input[type="submit"] {
+	margin: 0 0.3em;
+	font-size: 1.25em;
+}
+
+label {
+	display: block;
+	margin: 1em auto;
+}
+
+.cuadrito {
+	display: inline-block;
+	height: 30px;
+	vertical-align: middle;
+	width: 30px;
+	margin: 5px 1em;
+}
+
+.cuadrito:hover {
+	height: 40px;
+	width: 40px;
+	margin: 0 1em;
+}
+
+.listaColores {
+	background: rgba(20, 20, 20, 0.8);
+	max-height: 40px;
+	text-align: right;
+}
+
+.fondoRojo {
+	background: rgb(255, 0, 0);
+}
+
+.fondoAzulClaro {
+	background: lightblue;
+}
+
+.fondoVerde {
+	background: rgb(0, 255, 0);
+}
+
+.menu {
+	background: white;
+	line-height: 2.5em;
+	text-align: left;
+}
+
+.link {
+	text-decoration: none;
+	color: green;
+	vertical-align: middle;
+	margin: 0 1.2em;
+	padding: 0.5em;
+}
+
+.link:hover {
+	background: black;
+	color: white;
+}
+
+.active {
+	background: rgb(170, 0, 0);
+	color: white;
+}
