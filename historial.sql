@@ -14,9 +14,7 @@ CREATE TABLE visitas(
 	url varchar(55) NOT NULL,
 	title varchar(70) NOT NULL,
 	cantidad int NOT NULL,
-	temporal boolean NOT NULL,
 	FOREIGN KEY (email) REFERENCES usuarios(email),
-	FOREIGN KEY (url) REFERENCES paginas(url),
 	PRIMARY KEY (email, url)
 );
 

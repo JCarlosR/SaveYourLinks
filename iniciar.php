@@ -10,6 +10,7 @@
 		$row=mysql_fetch_row($res);
 		$_SESSION['email']=$row[0];
 		$_SESSION['nombre']=$row[1];
+		$_SESSION['tInicial']=time();
 		header("location:index.php");
 	} else header("location:login.php");
 	mysql_close($con);

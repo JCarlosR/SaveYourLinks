@@ -1,0 +1,13 @@
+pues lo que se podrias hacer es, dependiendo de como expones los resultados de busqueda, por ejemplo si los muestras en un iframe, los enlaces que arroja google tienen asignada en la propiedad data-href la url real, entonces:
+$(frames.tuIframe).on('click', function(e){
+var t = e.target,
+$t = $(t),
+href;
+if(t.tagName == 'A' && (href = $t.data('href')) != undefined){
+// hacer algo con href
+console.log(href);
+}
+});
+14 h · Ya no me gusta · 1
+
+Rodolfo Ascencio UPS! pero creo que google no te permite usar iframes, jeje, bueno pero su tus resultados son con Google Custom Search entonces ygual ya tienes una idea, en lugar de iframe usar el div o el elemento donde arrojas los resultados
