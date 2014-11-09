@@ -71,3 +71,12 @@ label {
 	background: rgb(170, 0, 0);
 	color: white;
 }
+.preferidos {
+
+     margin-top: 70px;
+}
+.preferidos h4 {
+    font-family: sans-serif;
+    font-size: 12px;
+  color: black;
+}

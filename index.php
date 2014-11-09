@@ -4,6 +4,16 @@
 	<meta charset="UTF-8">
 	<title>SaveYourLinks - Inicio</title>
 	<link rel="stylesheet" href="main.css">
+	<style>table {
+    border-spacing: 5px;
+}
+table, th, td {
+    padding: 5px;
+}
+table {
+    border-spacing: 15px;
+}</style>
+
 </head>
 <body>
 	<?php 
@@ -17,8 +27,9 @@
 		</label>
 		<input id="btnBuscar" type="submit" value="Realizar búsqueda">
 	</form>
-
-	<ul>
+<div class="preferidos">
+		<table style="width:66%" align="center">
+			<tr>
 	<?php
 	if( isset($_SESSION['email']) )
 	{ 
@@ -29,12 +40,13 @@
 		while( $row = mysql_fetch_row($resultSet) )
 		{
 	?>
-			<li><?php echo $row[0].": ".$row[1] ?></li>
-	<?php
+			<td><A HREF=<?php echo $row[0] ?> TARGET="_blank"><img  src="http://api.webthumbnail.org/?width=200&height=200&url=<?php echo $row[0] ?>"><h4><?php echo $row[1] ?></h4></td>
+	<?php  
 		}
-	}
-	?>
-	</ul>
+	}?>
+ </tr>
+</table>
+</div>
 
 	<script src="main.js"></script>	
 	<script>funcPrincipal()</script>		
