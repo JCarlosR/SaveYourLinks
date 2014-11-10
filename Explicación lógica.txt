@@ -1,8 +1,7 @@
 1º Un usuario inicia sesión:
--- Copiamos el contenido del historial como páginas del usuario, pero marcadas como temporales.
+-- Capturamos la fecha (incluyendo hora exacta) en que se ha iniciado sesión y lo guardamos en una variable de sesión.
+-- Copiamos la bd al momento de iniciar sesión.
 2º El usuario cierra sesión:
--- Obtenemos el contenido del historial y lo comparamos con las páginas que tiene el usuario marcadas como temporales.
---- Si es una URL nueva con respecto a lo temporal, agregamos sus datos como no temporales.
---- Si es una URL repetida comparamos la cantidad de visitas. Si la nueva cantidad es mayor a la que se tenía en cuanto inició sesión, agregamos la diferencia como la cantidad de visitas y guardamos como no temporales.
-
-* Guardar como no temporales implica verificar si la URL ya estaba antes como no temporal. Si no estaba se agrega directamente, si ya estaba se suma la nueva cantidad de visitas.
+-- Obtenemos el contenido del historial, pero filtramos y obtenemos solo las urls de las visitas posteriores al inicio de sesión.
+--- Si es una URL nueva con respecto a las visitadas por el usuario, agregamos la página directamente.
+--- Si es una URL repetida calculamos las visitas realizadas (visitas al salir menos las visitas que se tenía al iniciar sesión), y eso lo sumamos a la cantidad de visitas que tiene el usuario para tal página.
