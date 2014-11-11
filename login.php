@@ -13,10 +13,10 @@
 
 	<form method="POST" action="iniciar.php">
 		<label for="mail">E-mail:
-			<input type="text" name="mail">
+			<input type="text" name="mail" required>
 		</label>		
 		<label for="pass">Contraseña:
-			<input type="password" name="pass">
+			<input type="password" name="pass" required>
 		</label>		
 		<input id="btnEnviar" type="submit" value="¡ Ingresar !">
 	</form>

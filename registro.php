@@ -13,16 +13,16 @@
 
 	<form method="POST" action="nuevoUsuario.php">
 		<label for="mail">E-mail:
-			<input type="text" name="mail">
+			<input type="text" name="mail" required>
 		</label>
 		<label for="user">Nombre de usuario:
-			<input type="text" name="user">
+			<input type="text" name="user" required>
 		</label>		
 		<label for="pass">Contraseña:
-			<input type="password" name="pass">
+			<input type="password" name="pass" required>
 		</label>		
 		<input id="btnEnviar" type="submit" value="¡ Registrarme !">
-		<input id="btnEnviar" type="submit" value="Registrarme con facebook">
+		<input id="btnEnviar" type="submit" value="Registrarme con facebook" disabled>
 	</form>
 
 	<script src="main.js"></script>	
